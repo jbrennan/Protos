@@ -11,7 +11,110 @@
 		CD07553F1CA1E23B00F9FAD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07553E1CA1E23B00F9FAD3 /* ViewController.swift */; };
 		CD0755441CA1E23B00F9FAD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0755431CA1E23B00F9FAD3 /* Assets.xcassets */; };
 		CD0755471CA1E23B00F9FAD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0755451CA1E23B00F9FAD3 /* LaunchScreen.storyboard */; };
+		CD0755C01CA2E30F00F9FAD3 /* Prototope.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0755AB1CA2E2F500F9FAD3 /* Prototope.framework */; };
+		CD0755C11CA2E30F00F9FAD3 /* Prototope.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD0755AB1CA2E2F500F9FAD3 /* Prototope.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD0755AA1CA2E2F500F9FAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBE3A75619DF79C400A77736;
+			remoteInfo = Prototope;
+		};
+		CD0755AC1CA2E2F500F9FAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB306C0919DF77CC00113FA3;
+			remoteInfo = PrototopeTestApp;
+		};
+		CD0755AE1CA2E2F500F9FAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB1C2A6C19E4D19B000DC2C1;
+			remoteInfo = PrototopeTests;
+		};
+		CD0755B01CA2E2F500F9FAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB453D8F1A7AB0B2006F2A72;
+			remoteInfo = PrototopeJSBridge;
+		};
+		CD0755B21CA2E2F500F9FAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB453D991A7AB0B2006F2A72;
+			remoteInfo = PrototopeJSBridgeTests;
+		};
+		CD0755B41CA2E2F500F9FAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB6BFB801A857326002B4E6A;
+			remoteInfo = Protocaster;
+		};
+		CD0755B61CA2E2F500F9FAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB6BFB911A857326002B4E6A;
+			remoteInfo = ProtocasterTests;
+		};
+		CD0755B81CA2E2F500F9FAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB6BFBB51A857920002B4E6A;
+			remoteInfo = Protoscope;
+		};
+		CD0755BA1CA2E2F500F9FAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB6BFBC91A857921002B4E6A;
+			remoteInfo = ProtoscopeTests;
+		};
+		CD0755BC1CA2E2F500F9FAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96A192331B531B3200D73B07;
+			remoteInfo = PrototopeOSX;
+		};
+		CD0755BE1CA2E2F500F9FAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96A1923D1B531B3300D73B07;
+			remoteInfo = PrototopeOSXTests;
+		};
+		CD0755C21CA2E30F00F9FAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EBE3A75519DF79C400A77736;
+			remoteInfo = Prototope;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CD0755C41CA2E30F00F9FAD3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CD0755C11CA2E30F00F9FAD3 /* Prototope.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CD0755391CA1E23B00F9FAD3 /* Protos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +123,7 @@
 		CD0755431CA1E23B00F9FAD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0755461CA1E23B00F9FAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD0755481CA1E23B00F9FAD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Prototope.xcodeproj; path = prototope/Prototope.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0755C01CA2E30F00F9FAD3 /* Prototope.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +143,7 @@
 			children = (
 				CD07553B1CA1E23B00F9FAD3 /* Protos */,
 				CD07553A1CA1E23B00F9FAD3 /* Products */,
+				CD0755971CA2E2DC00F9FAD3 /* Libraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +167,32 @@
 			path = Protos;
 			sourceTree = "<group>";
 		};
+		CD0755971CA2E2DC00F9FAD3 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		CD0755991CA2E2F500F9FAD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD0755AB1CA2E2F500F9FAD3 /* Prototope.framework */,
+				CD0755AD1CA2E2F500F9FAD3 /* PrototopeTestApp.app */,
+				CD0755AF1CA2E2F500F9FAD3 /* PrototopeTests.xctest */,
+				CD0755B11CA2E2F500F9FAD3 /* PrototopeJSBridge.framework */,
+				CD0755B31CA2E2F500F9FAD3 /* PrototopeJSBridgeTests.xctest */,
+				CD0755B51CA2E2F500F9FAD3 /* Protocaster.app */,
+				CD0755B71CA2E2F500F9FAD3 /* ProtocasterTests.xctest */,
+				CD0755B91CA2E2F500F9FAD3 /* Protoscope.app */,
+				CD0755BB1CA2E2F500F9FAD3 /* ProtoscopeTests.xctest */,
+				CD0755BD1CA2E2F500F9FAD3 /* PrototopeOSX.framework */,
+				CD0755BF1CA2E2F500F9FAD3 /* PrototopeOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,10 +203,12 @@
 				CD0755351CA1E23B00F9FAD3 /* Sources */,
 				CD0755361CA1E23B00F9FAD3 /* Frameworks */,
 				CD0755371CA1E23B00F9FAD3 /* Resources */,
+				CD0755C41CA2E30F00F9FAD3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CD0755C31CA2E30F00F9FAD3 /* PBXTargetDependency */,
 			);
 			name = Protos;
 			productName = Protos;
@@ -107,12 +241,98 @@
 			mainGroup = CD0755301CA1E23B00F9FAD3;
 			productRefGroup = CD07553A1CA1E23B00F9FAD3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CD0755991CA2E2F500F9FAD3 /* Products */;
+					ProjectRef = CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CD0755381CA1E23B00F9FAD3 /* Protos */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CD0755AB1CA2E2F500F9FAD3 /* Prototope.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Prototope.framework;
+			remoteRef = CD0755AA1CA2E2F500F9FAD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD0755AD1CA2E2F500F9FAD3 /* PrototopeTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = PrototopeTestApp.app;
+			remoteRef = CD0755AC1CA2E2F500F9FAD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD0755AF1CA2E2F500F9FAD3 /* PrototopeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PrototopeTests.xctest;
+			remoteRef = CD0755AE1CA2E2F500F9FAD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD0755B11CA2E2F500F9FAD3 /* PrototopeJSBridge.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PrototopeJSBridge.framework;
+			remoteRef = CD0755B01CA2E2F500F9FAD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD0755B31CA2E2F500F9FAD3 /* PrototopeJSBridgeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PrototopeJSBridgeTests.xctest;
+			remoteRef = CD0755B21CA2E2F500F9FAD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD0755B51CA2E2F500F9FAD3 /* Protocaster.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Protocaster.app;
+			remoteRef = CD0755B41CA2E2F500F9FAD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD0755B71CA2E2F500F9FAD3 /* ProtocasterTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ProtocasterTests.xctest;
+			remoteRef = CD0755B61CA2E2F500F9FAD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD0755B91CA2E2F500F9FAD3 /* Protoscope.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Protoscope.app;
+			remoteRef = CD0755B81CA2E2F500F9FAD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD0755BB1CA2E2F500F9FAD3 /* ProtoscopeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ProtoscopeTests.xctest;
+			remoteRef = CD0755BA1CA2E2F500F9FAD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD0755BD1CA2E2F500F9FAD3 /* PrototopeOSX.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PrototopeOSX.framework;
+			remoteRef = CD0755BC1CA2E2F500F9FAD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD0755BF1CA2E2F500F9FAD3 /* PrototopeOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PrototopeOSXTests.xctest;
+			remoteRef = CD0755BE1CA2E2F500F9FAD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CD0755371CA1E23B00F9FAD3 /* Resources */ = {
@@ -137,6 +357,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD0755C31CA2E30F00F9FAD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Prototope;
+			targetProxy = CD0755C21CA2E30F00F9FAD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CD0755451CA1E23B00F9FAD3 /* LaunchScreen.storyboard */ = {
@@ -237,8 +465,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/prototope/ThirdParty/**",
+					"$(SRCROOT)/prototope/Prototope/",
+				);
 				INFOPLIST_FILE = Protos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/prototope/ThirdParty/**";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = land.brennan.Protos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -248,8 +486,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/prototope/ThirdParty/**",
+					"$(SRCROOT)/prototope/Prototope/",
+				);
 				INFOPLIST_FILE = Protos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/prototope/ThirdParty/**";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = land.brennan.Protos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -274,6 +522,7 @@
 				CD07554D1CA1E23B00F9FAD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
