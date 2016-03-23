@@ -13,6 +13,7 @@
 		CD0755471CA1E23B00F9FAD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0755451CA1E23B00F9FAD3 /* LaunchScreen.storyboard */; };
 		CD0755C01CA2E30F00F9FAD3 /* Prototope.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0755AB1CA2E2F500F9FAD3 /* Prototope.framework */; };
 		CD0755C11CA2E30F00F9FAD3 /* Prototope.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD0755AB1CA2E2F500F9FAD3 /* Prototope.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD0755C71CA2E3E600F9FAD3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0755C61CA2E3E600F9FAD3 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		CD0755461CA1E23B00F9FAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD0755481CA1E23B00F9FAD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Prototope.xcodeproj; path = prototope/Prototope.xcodeproj; sourceTree = "<group>"; };
+		CD0755C61CA2E3E600F9FAD3 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				CD0755431CA1E23B00F9FAD3 /* Assets.xcassets */,
 				CD0755451CA1E23B00F9FAD3 /* LaunchScreen.storyboard */,
 				CD0755481CA1E23B00F9FAD3 /* Info.plist */,
+				CD0755C61CA2E3E600F9FAD3 /* Color.swift */,
 			);
 			path = Protos;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			files = (
 				CD07553F1CA1E23B00F9FAD3 /* ViewController.swift in Sources */,
 				CD07553D1CA1E23B00F9FAD3 /* AppDelegate.swift in Sources */,
+				CD0755C71CA2E3E600F9FAD3 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
