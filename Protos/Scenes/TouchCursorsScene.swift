@@ -18,8 +18,10 @@ class TouchCursorsScene {
 		Layer.root.touchBeganHandler = { touch in
 			let cursor = Layer()
 			cursor.backgroundColor = Color.darkGray
-			cursor.size = Size(width: 44, height: 44)
-			cursor.cornerRadius = cursor.size.width / 2.0
+			
+			let dimension = 60.0
+			cursor.size = Size(width: dimension, height: dimension)
+			cursor.cornerRadius = dimension / 2.0
 			
 			cursor.position = touch.currentSample.globalLocation
 			
