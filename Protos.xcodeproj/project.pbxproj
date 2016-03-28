@@ -126,6 +126,7 @@
 		962F06651CA869FF000CD2C5 /* SceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		962F06691CA86A2D000CD2C5 /* SceneIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneIndex.swift; sourceTree = "<group>"; };
 		962F066B1CA86AC5000CD2C5 /* TouchCursorsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchCursorsScene.swift; sourceTree = "<group>"; };
+		962F066D1CA872BB000CD2C5 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		CD0755391CA1E23B00F9FAD3 /* Protos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD07553C1CA1E23B00F9FAD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD07553E1CA1E23B00F9FAD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +171,7 @@
 		CD0755301CA1E23B00F9FAD3 = {
 			isa = PBXGroup;
 			children = (
+				962F066D1CA872BB000CD2C5 /* MultipeerConnectivity.framework */,
 				CD07553B1CA1E23B00F9FAD3 /* Protos */,
 				CD07553A1CA1E23B00F9FAD3 /* Products */,
 				CD0755971CA2E2DC00F9FAD3 /* Libraries */,
