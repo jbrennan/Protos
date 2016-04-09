@@ -171,7 +171,6 @@
 		CD0755301CA1E23B00F9FAD3 = {
 			isa = PBXGroup;
 			children = (
-				962F066D1CA872BB000CD2C5 /* MultipeerConnectivity.framework */,
 				CD07553B1CA1E23B00F9FAD3 /* Protos */,
 				CD07553A1CA1E23B00F9FAD3 /* Products */,
 				CD0755971CA2E2DC00F9FAD3 /* Libraries */,
@@ -203,6 +202,7 @@
 		CD0755971CA2E2DC00F9FAD3 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				962F066D1CA872BB000CD2C5 /* MultipeerConnectivity.framework */,
 				CD0755981CA2E2F500F9FAD3 /* Prototope.xcodeproj */,
 			);
 			name = Libraries;
