@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		navigationController.interactivePopGestureRecognizer!.enabled = false
 		window.rootViewController = navigationController
 		
-		let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleSwipeBackGesture:")
+		let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(AppDelegate.handleSwipeBackGesture(_:)))
 		swipeGestureRecognizer.numberOfTouchesRequired = 3
 		swipeGestureRecognizer.direction = .Right
 		window.addGestureRecognizer(swipeGestureRecognizer)

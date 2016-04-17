@@ -43,7 +43,7 @@ class SceneViewController: UIViewController {
 
     override var keyCommands: [UIKeyCommand]? {
         get {
-            let escape = UIKeyCommand(input: UIKeyInputEscape, modifierFlags: UIKeyModifierFlags(rawValue: 0), action: "handleKeyCommand:")
+            let escape = UIKeyCommand(input: UIKeyInputEscape, modifierFlags: UIKeyModifierFlags(rawValue: 0), action: #selector(SceneViewController.handleKeyCommand(_:)))
             return [escape]
         }
     }
