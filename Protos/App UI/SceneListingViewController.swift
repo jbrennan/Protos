@@ -11,6 +11,7 @@ import UIKit
 class SceneListingViewController: UITableViewController {
 	private let dataSource: SceneListingDataSource
 	private var sceneActivationHandler: Scene -> ()
+	private var forceLoadFirstScene = true
 
 	init(scenes: [Scene], sceneActivationHandler: Scene -> ()) {
 		dataSource = SceneListingDataSource(scenes: scenes)
@@ -28,8 +29,11 @@ class SceneListingViewController: UITableViewController {
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		// for now, just force load the first scene
-		sceneActivationHandler(dataSource.scenes[0]) 
+		if forceLoadFirstScene {
+			// for now, just force load the first scene
+			sceneActivationHandler(dataSource.scenes[0])
+			forceLoadFirstScene = false
+		}
 	}
 	
 
