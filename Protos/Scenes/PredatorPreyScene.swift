@@ -10,11 +10,12 @@ import Prototope
 
 class PredatorPreyScene {
 	
-	let predators: [Predator]
+	var predators: [Predator]
 	let prey: [Entity]
 	
 	var heartBeat: Heartbeat!
 	static let updateInterval = 60
+	static let babyInterval = PredatorPreyScene.updateInterval * 5
 	
 	init() {
 		Layer.root.backgroundColor = Palette.lightBackground
@@ -31,9 +32,22 @@ class PredatorPreyScene {
 				}
 			}
 			
+			if tickCount % PredatorPreyScene.babyInterval == 0 {
+				let livingPredators = self.predators.filter { $0.isDead == false }
+				for predator in livingPredators {
+					let entity = predator.copy()
+					entity.position = PredatorPreyScene.randomOnScreenPoint()
+					entity.popIn()
+					
+					self.predators.append(entity as! Predator)
+				}
+			}
+			
 			tickCount += 1
 		})
 	}
+	
+	
 
 }
 
@@ -69,7 +83,10 @@ extension PredatorPreyScene {
 }
 
 class Entity: Layer {
+	let emoji: String
+	
 	required init(emoji: String) {
+		self.emoji = emoji
 		super.init()
 		self.image = Image(text: emoji)
 	}
@@ -79,7 +96,13 @@ class Entity: Layer {
 	private (set) var isDead = false
 	func die() {
 		isDead = true
-		alpha = 0.5
+		alpha = 0.2
+	}
+	
+	func copy() -> Entity {
+		let copy = self.dynamicType.init(emoji: emoji)
+		
+		return copy
 	}
 }
 
@@ -101,16 +124,27 @@ class Predator: Entity {
 			return
 		}
 		
-		
-		let shouldGetHungrier = Int(drand48() * 5) % 5 == 0
+		let hungryRandomness = 3
+		let shouldGetHungrier = Int(drand48() * Double(hungryRandomness)) % hungryRandomness == 0
 		hunger = hunger + (shouldGetHungrier ? 1 : 0)
 		
-		let hungerLimit = 5
+		let hungerLimit = 3
 		if hunger == hungerLimit {
 			die()
 		}
 	}
 	
 	
+}
+
+// MARK: - Prototope Extensions
+
+extension Layer {
+	
+	/// Scale up to full size with a spring animation
+	func popIn() {
+		scale = 0.01
+		animators.scale.target = Point(x: 1, y: 1)
+	}
 }
 
