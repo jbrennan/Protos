@@ -31,7 +31,7 @@ class SceneListingViewController: UITableViewController {
 		
 		if forceLoadFirstScene {
 			// for now, just force load the first scene
-			sceneActivationHandler(dataSource.scenes[0])
+			sceneActivationHandler(dataSource.scenes[1])
 			forceLoadFirstScene = false
 		}
 	}

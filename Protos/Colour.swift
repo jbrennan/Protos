@@ -21,6 +21,8 @@ extension Color {
 struct Palette {
 	static var red: Color { return Color(hue: 353, saturation: 99, brightness: 82) }
 	
+	static var lightBackground: Color { return Color(brightness:96) }
+	
 	// Really 49.39, 76.4, 100
 	static var selectedYellow: Color { return Color(hue: 49, saturation: 76, brightness: 100) }
 }

@@ -11,6 +11,7 @@
 		962F06671CA869FF000CD2C5 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F06651CA869FF000CD2C5 /* SceneViewController.swift */; };
 		962F066A1CA86A2D000CD2C5 /* SceneIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F06691CA86A2D000CD2C5 /* SceneIndex.swift */; };
 		962F066C1CA86AC5000CD2C5 /* TouchCursorsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F066B1CA86AC5000CD2C5 /* TouchCursorsScene.swift */; };
+		964CEAE51CFB700C007F759C /* PredatorPreyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964CEAE41CFB700C007F759C /* PredatorPreyScene.swift */; };
 		CD07553D1CA1E23B00F9FAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07553C1CA1E23B00F9FAD3 /* AppDelegate.swift */; };
 		CD07553F1CA1E23B00F9FAD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07553E1CA1E23B00F9FAD3 /* ViewController.swift */; };
 		CD0755441CA1E23B00F9FAD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0755431CA1E23B00F9FAD3 /* Assets.xcassets */; };
@@ -127,6 +128,7 @@
 		962F06691CA86A2D000CD2C5 /* SceneIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneIndex.swift; sourceTree = "<group>"; };
 		962F066B1CA86AC5000CD2C5 /* TouchCursorsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchCursorsScene.swift; sourceTree = "<group>"; };
 		962F066D1CA872BB000CD2C5 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		964CEAE41CFB700C007F759C /* PredatorPreyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredatorPreyScene.swift; sourceTree = "<group>"; };
 		CD0755391CA1E23B00F9FAD3 /* Protos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD07553C1CA1E23B00F9FAD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD07553E1CA1E23B00F9FAD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				962F066B1CA86AC5000CD2C5 /* TouchCursorsScene.swift */,
+				964CEAE41CFB700C007F759C /* PredatorPreyScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				962F06671CA869FF000CD2C5 /* SceneViewController.swift in Sources */,
+				964CEAE51CFB700C007F759C /* PredatorPreyScene.swift in Sources */,
 				962F06661CA869FF000CD2C5 /* SceneListingViewController.swift in Sources */,
 				CD07553F1CA1E23B00F9FAD3 /* ViewController.swift in Sources */,
 				CD07553D1CA1E23B00F9FAD3 /* AppDelegate.swift in Sources */,
