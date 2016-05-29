@@ -31,14 +31,16 @@ class TouchCursorsScene {
 			
 			self.cursorLayers[touch.id] = cursor
 			
-			self.cursorPositions.addCursor(touch.id.intID, position: cursor.position)
+//			self.cursorPositions.addCursor(touch.id.intID, position: cursor.position)
 		}
 		
 		
 		Layer.root.touchMovedHandler = { touch in
 			let cursor = self.cursorLayers[touch.id]!
 			cursor.position = touch.currentSample.globalLocation
-			self.cursorPositions.updateCursor(touch.id.intID, position: cursor.position)
+//			self.cursorPositions.updateCursor(touch.id.intID, position: cursor.position)
+			
+			print(touch.currentSample.force)
 			
 		}
 		
@@ -48,7 +50,7 @@ class TouchCursorsScene {
 			cursor.parent = nil
 			
 			self.cursorLayers.removeValueForKey(touch.id)
-			self.cursorPositions.removeCursor(touch.id.intID)
+//			self.cursorPositions.removeCursor(touch.id.intID)
 		}
 		
 		heartbeat = Heartbeat { beat in 
@@ -56,10 +58,10 @@ class TouchCursorsScene {
 				
 				// Can't send the data in an array over the network, so we're sending it one by one
 				// This is kind of silly/expensive. might be worth trying NSCoding next
-				self.cursorPositions.encodeEachCursor { data in
-					self.networking.sendCursorPositions(data)
-				}
-				self.cursorPositions.hasUpdate = false
+//				self.cursorPositions.encodeEachCursor { data in
+//					self.networking.sendCursorPositions(data)
+//				}
+//				self.cursorPositions.hasUpdate = false
 			}
 		}
 	
