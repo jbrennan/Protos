@@ -33,7 +33,7 @@ class PredatorPreyScene {
 			}
 			
 			if tickCount % PredatorPreyScene.babyInterval == 0 {
-				let livingPredators = self.predators.filter { $0.isDead == false }
+				let livingPredators = self.predators.filter { $0.isDead == false && $0.hunger == 0 }
 				for predator in livingPredators {
 					let entity = predator.copy()
 					entity.position = PredatorPreyScene.randomOnScreenPoint()
