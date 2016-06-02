@@ -17,6 +17,8 @@ class PredatorPreyScene {
 	static let updateInterval = 60
 	static let babyInterval = PredatorPreyScene.updateInterval * 5
 	
+	let startTime = NSDate()
+	
 	init() {
 		Layer.root.backgroundColor = Palette.lightBackground
 		
@@ -30,10 +32,11 @@ class PredatorPreyScene {
 				for predator in self.predators {
 					predator.update()
 				}
+				self.predators = self.predators.filter { !$0.isDead }
 			}
 			
 			if tickCount % PredatorPreyScene.babyInterval == 0 {
-				let livingPredators = self.predators.filter { $0.isDead == false && $0.hunger == 0 }
+				let livingPredators = self.predators.filter { $0.hunger == 0 }
 				for predator in livingPredators {
 					let entity = predator.copy()
 					entity.position = PredatorPreyScene.randomOnScreenPoint()
@@ -42,7 +45,7 @@ class PredatorPreyScene {
 					self.predators.append(entity as! Predator)
 				}
 				
-				let livingPrey = self.prey.filter { !$0.isDead }
+				let livingPrey = self.prey
 				for prey in livingPrey {
 					let entity = prey.copy()
 					entity.position = PredatorPreyScene.randomOnScreenPoint()
@@ -57,7 +60,7 @@ class PredatorPreyScene {
 			//		- if distance is very small, move to it and eat it
 			//		- if distance is decent, move towards the prey
 			//		- else, move to a random spot
-			let livingPredators = self.predators.filter { $0.isDead == false }
+			let livingPredators = self.predators
 			for predator in livingPredators {
 				let closestPrey = self.nearestPreyToPredator(predator)
 				let distanceToPrey = fabs(predator.position.distanceToPoint(closestPrey.position))
@@ -68,6 +71,7 @@ class PredatorPreyScene {
 				if distanceToPrey < eatingDistance {
 					predator.position = closestPrey.position
 					closestPrey.die()
+					self.prey.removeElement(closestPrey)
 					predator.hunger = 0
 					
 				} else if distanceToPrey < chasingDistance {
@@ -80,18 +84,26 @@ class PredatorPreyScene {
 			
 			// bunnies should just wander, I think
 			//	- maybe eventually they should evade predators
-			let livingPrey = self.prey.filter { !$0.isDead }
+			let livingPrey = self.prey
 			for prey in livingPrey {
 				prey.position = self.randomPointWithinDistance(2, ofPoint: prey.position)
 			}
 			tickCount += 1
+			
+			if self.predators.count == 0 || self.prey.count == 0 {
+				beat.stop()
+				let now = NSDate()
+				let length = now.timeIntervalSinceDate(self.startTime)
+				print("All dead. Lasted \(length) seconds")
+			}
+			
 		})
 	}
 	
 	func nearestPreyToPredator(predator: Predator) -> Entity {
 		var shortestDistance = Double.infinity
 		var closestPrey = prey.first!
-		let livingPrey = prey.filter { !$0.isDead }
+		let livingPrey = prey
 		
 		for bunny in livingPrey {
 			let distanceToPrey = fabs(predator.position.distanceToPoint(bunny.position))
@@ -178,6 +190,7 @@ class Entity: Layer {
 	func die() {
 		isDead = true
 		alpha = 0.2
+		fadeOutAndRemoveAfterDuration(2)
 	}
 	
 	func copy() -> Entity {
@@ -226,6 +239,14 @@ extension Layer {
 	func popIn() {
 		scale = 0.01
 		animators.scale.target = Point(x: 1, y: 1)
+	}
+}
+
+extension Array where Element: Equatable {
+	mutating func removeElement(element: Generator.Element) {
+		if let index = indexOf(element) {
+			removeAtIndex(index)
+		}
 	}
 }
 
