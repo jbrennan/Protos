@@ -36,7 +36,7 @@ class PredatorPreyScene {
 			}
 			
 			if tickCount % PredatorPreyScene.babyInterval == 0 {
-				let livingPredators = self.predators.filter { $0.hunger == 0 }
+				let livingPredators = self.predators.filter { $0.hasEatenThisRound }
 				for predator in livingPredators {
 					let entity = predator.copy()
 					entity.position = PredatorPreyScene.randomOnScreenPoint()
@@ -53,6 +53,8 @@ class PredatorPreyScene {
 					
 					self.prey.append(entity)
 				}
+				
+				self.predators.forEach { $0.hasEatenThisRound = false }
 			}
 			
 			// wolves should hunt a bit on each tick:
@@ -73,6 +75,7 @@ class PredatorPreyScene {
 					closestPrey.die()
 					self.prey.removeElement(closestPrey)
 					predator.hunger = 0
+					predator.hasEatenThisRound = true
 					
 				} else if distanceToPrey < chasingDistance {
 					predator.position = self.pointAlongLineOfStartingPoint(predator.position, endingPoint: closestPrey.position)
@@ -207,6 +210,7 @@ class Predator: Entity {
 			labelLayer.text = "\(hunger)"
 		}
 	}
+	var hasEatenThisRound = false
 	
 	required init(emoji: String) {
 		super.init(emoji: emoji)
@@ -227,8 +231,6 @@ class Predator: Entity {
 			die()
 		}
 	}
-	
-	
 }
 
 // MARK: - Prototope Extensions
