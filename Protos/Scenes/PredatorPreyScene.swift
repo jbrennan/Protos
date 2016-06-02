@@ -18,12 +18,23 @@ class PredatorPreyScene {
 	static let babyInterval = PredatorPreyScene.updateInterval * 5
 	
 	let startTime = NSDate()
+	let predatorLabel = TextLayer(parent: Layer.root, name: nil)
+	let preyLabel = TextLayer(parent: Layer.root, name: nil)
 	
 	init() {
 		Layer.root.backgroundColor = Palette.lightBackground
 		
 		predators = PredatorPreyScene.makePredators()
 		prey = PredatorPreyScene.makePrey()
+		
+		preyLabel.backgroundColor = Color.lightGray
+		predatorLabel.backgroundColor = Color.lightGray
+		
+
+		predatorLabel.originY = 0
+		predatorLabel.originX = 0
+		
+		preyLabel.originY = 0
 		
 		var tickCount = 0
 		heartBeat = Heartbeat(handler: { beat in
@@ -91,6 +102,15 @@ class PredatorPreyScene {
 			for prey in livingPrey {
 				prey.position = self.randomPointWithinDistance(2, ofPoint: prey.position)
 			}
+			
+			// update labels
+			self.predatorLabel.text = "Wolves: \(self.predators.count)"
+			self.preyLabel.text = "Bunnies: \(self.prey.count)"
+			self.preyLabel.moveToRightOfSiblingLayer(self.predatorLabel, margin: 10)
+			
+			self.predatorLabel.comeToFront()
+			self.preyLabel.comeToFront()
+			
 			tickCount += 1
 			
 			if self.predators.count == 0 || self.prey.count == 0 {
