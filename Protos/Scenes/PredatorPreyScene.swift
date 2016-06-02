@@ -17,14 +17,14 @@ class PredatorPreyScene {
 	static let updateInterval = 60
 	static let babyInterval = PredatorPreyScene.updateInterval * 5
 	
-	let startTime = NSDate()
 	let predatorLabel = TextLayer(parent: Layer.root, name: nil)
 	let preyLabel = TextLayer(parent: Layer.root, name: nil)
+	
 	
 	init() {
 		Layer.root.backgroundColor = Palette.lightBackground
 		
-		predators = PredatorPreyScene.makePredators()
+		predators = []//PredatorPreyScene.makePredators()
 		prey = PredatorPreyScene.makePrey()
 		
 		preyLabel.backgroundColor = Color.lightGray
@@ -113,14 +113,18 @@ class PredatorPreyScene {
 			
 			tickCount += 1
 			
-			if self.predators.count == 0 || self.prey.count == 0 {
-				beat.stop()
-				let now = NSDate()
-				let length = now.timeIntervalSinceDate(self.startTime)
-				print("All dead. Lasted \(length) seconds")
-			}
 			
 		})
+		
+		
+		Layer.root.touchMovedHandler = { touch in
+			let position = touch.currentSample.globalLocation
+			let predator = PredatorPreyScene.makePredatorAtPoint(position)
+			predator.popIn()
+			
+			self.predators.append(predator)
+		}
+		
 	}
 	
 	func nearestPreyToPredator(predator: Predator) -> Entity {
@@ -178,6 +182,12 @@ extension PredatorPreyScene {
 		return makeEntitiesWithFace("🐰", type: Entity.self)
 	}
 	
+	static func makePredatorAtPoint(point: Point) -> Predator {
+		let predator = Predator(emoji: "🐺")
+		predator.position = point
+		return predator
+	}
+	
 	static func makeEntitiesWithFace(face: String, type: Entity.Type) -> [Entity] {
 		var entities = [Entity]()
 		
@@ -224,17 +234,17 @@ class Entity: Layer {
 }
 
 class Predator: Entity {
-	let labelLayer = TextLayer()
+//	let labelLayer = TextLayer()
 	var hunger = 0 {
 		didSet {
-			labelLayer.text = "\(hunger)"
+//			labelLayer.text = "\(hunger)"
 		}
 	}
 	var hasEatenThisRound = false
 	
 	required init(emoji: String) {
 		super.init(emoji: emoji)
-		labelLayer.parent = self
+//		labelLayer.parent = self
 	}
 	
 	override func update() {
