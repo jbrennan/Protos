@@ -37,7 +37,7 @@ class PanelScene {
 		targetLayer.moveBelowSiblingLayer(fish)
 		
 		targetLayer.makeDraggable { target in
-			target.position = target.position.pointClampedInsideRect(self.canvasLayer.frame)
+			target.position = target.position.pointClampedInsideRect(self.canvasLayer.bounds)
 		}
 	}
 }
@@ -54,7 +54,7 @@ extension Layer {
 		}
 		
 		touchMovedHandler = { touchSequence in
-			let currentLocation = touchSequence.currentSample.globalLocation
+			let currentLocation = touchSequence.currentSample.locationInLayer(self.parent!)
 			
 			// I want this to do "locationInLayer(rect)" but AT THE TIME of the first sample.
 			// But this takes the first sample and tries to get its location of where the layer is NOW
