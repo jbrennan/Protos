@@ -72,6 +72,10 @@ class DeadFishScene {
 		
 		velocity = Line(start: velocity.start, end: movedLine.end)
 		
+		let hue = fish.position.y / Layer.root.height
+		let saturation = fish.position.x / Layer.root.width
+		fish.backgroundColor = Color(hue: hue, saturation: saturation, brightness: 1)
+		
 		updateLineView()
 	}
 	
