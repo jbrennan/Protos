@@ -75,6 +75,10 @@ class PredatorPreyScene {
 			//		- else, move to a random spot
 			let livingPredators = self.predators
 			for predator in livingPredators {
+				if self.prey.isEmpty {
+					break
+				}
+				
 				let closestPrey = self.nearestPreyToPredator(predator)
 				let distanceToPrey = fabs(predator.position.distanceToPoint(closestPrey.position))
 				
