@@ -10,7 +10,7 @@ import Prototope
 
 
 class DeadFishScene {
-	
+	static let FishInitialPosition = Point(x: 50, y: 50)
 	let fish = Layer()
 	var target = Point()
 	var heartbeat: Heartbeat!
@@ -22,7 +22,7 @@ class DeadFishScene {
 		fish.cornerRadius = 4
 		fish.backgroundColor = Palette.selectedYellow
 		
-		fish.moveToCenterOfParentLayer()
+		fish.position = DeadFishScene.FishInitialPosition
 		
 		
 		
@@ -42,7 +42,8 @@ class DeadFishScene {
 	
 	func onEachFrame() {
 //		trackTarget()
-		chaseTarget()
+//		chaseTarget()
+		springTowardTarget()
 	}
 	
 	
@@ -55,6 +56,31 @@ class DeadFishScene {
 		let line = Line(start: fish.position, end: target)
 		let scaledLine = line.scaled(by: 0.15)
 		fish.position = scaledLine.end
+	}
+	
+	var velocity = Line(start: DeadFishScene.FishInitialPosition, end: Point(x: 50, y: 150))
+	func springTowardTarget() {
+		fish.position = velocity.end
+		
+		
+		velocity = velocity.movedToStartingPoint(fish.position)
+		velocity = velocity.scaled(by: 0.78)
+		
+		let scalingLine = Line(start: fish.position, end: target)
+		let scaledLine = scalingLine.scaled(by: 0.3)
+		let movedLine = scaledLine.movedToStartingPoint(velocity.end)
+		
+		velocity = Line(start: velocity.start, end: movedLine.end)
+		
+		updateLineView()
+	}
+	
+	
+	var lineView: ShapeLayer!
+	func updateLineView() {
+		lineView?.parent = nil
+		
+		lineView = ShapeLayer(lineFromFirstPoint: velocity.start, toSecondPoint: velocity.end)
 	}
 }
 
@@ -71,6 +97,16 @@ extension Line {
 		let scaled = delta * by
 		
 		return Line(start: start, end: start + scaled)
+	}
+	
+	func translated(by translation: Point) -> Line {
+		return Line(start: start + translation, end: end + translation)
+	}
+	
+	func movedToStartingPoint(startingPoint: Point) -> Line {
+		let delta = startingPoint - start
+		
+		return self.translated(by: delta)
 	}
 }
 
