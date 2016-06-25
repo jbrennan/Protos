@@ -14,13 +14,14 @@ class PanelScene {
 	let canvasLayer = Layer()
 	let fish = Layer()
 	let targetLayer = Layer()
+	let playButton = Layer()
 	
 	init() {
 		Layer.root.backgroundColor = Palette.lightBackground
 		
 		canvasLayer.size = Size(width: Layer.root.width, height: Layer.root.width)
 		canvasLayer.moveToHorizontalCenterOfParentLayer()
-		canvasLayer.originY = 0
+		canvasLayer.moveToTopSideOfParentLayer(margin: 100)
 		canvasLayer.backgroundColor = .white
 		
 		fish.backgroundColor = Color(hue: 37, saturation: 86, brightness: 96)
@@ -39,6 +40,47 @@ class PanelScene {
 		targetLayer.makeDraggable { target in
 			target.position = target.position.pointClampedInsideRect(self.canvasLayer.bounds)
 		}
+		
+		playButton.image = Image(text: "Play")
+		playButton.moveBelowSiblingLayer(canvasLayer, margin: 20)
+		playButton.moveToHorizontalCenterOfParentLayer()
+		playButton.touchEndedHandler = { _ in
+			self.play()
+		}
+	}
+	
+	
+	func play() {
+		let stageLayer = StageLayer(frame: Layer.root.bounds)
+		
+		
+		stageLayer.popIn()
+	}
+}
+
+
+class StageLayer: Layer {
+	let canvas = Layer()
+	private let bg = Layer()
+	
+	init(frame: Rect) {
+		super.init()
+		
+		self.frame = frame
+		backgroundColor = .black
+		
+		bg.parent = self
+		bg.frame = bounds
+		bg.backgroundColor = .black
+		bg.touchEndedHandler = { _ in
+			self.fadeOutAndRemoveAfterDuration(0.2)
+		}
+		
+		canvas.parent = self
+		canvas.backgroundColor = .white
+		canvas.size = Size(width: width, height: width)
+		canvas.moveToCenterOfParentLayer()
+		
 	}
 }
 
