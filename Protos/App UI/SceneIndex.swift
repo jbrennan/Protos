@@ -14,6 +14,8 @@ struct Scene {
 	
 	static let sceneIndex: [Scene] = [
 		Scene(name: "Touch Cursors", constructor: { TouchCursorsScene() }),
-		Scene(name: "Predator / Prey", constructor: { PredatorPreyScene() })
+		Scene(name: "Predator / Prey", constructor: { PredatorPreyScene() }),
+		Scene(name: "Dead Fish", constructor: { DeadFishScene() }),
+		Scene(name: "Panel", constructor: { PanelScene() }),
 	]
 }
